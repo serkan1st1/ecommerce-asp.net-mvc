@@ -1,0 +1,42 @@
+﻿@using e_commerce.Models;
+
+@model IEnumerable<ProductModel>
+
+
+<div class="col-md-12 mt-2">
+    <div class="row">
+
+        @foreach (var urun in Model)
+        {
+
+
+        <div class="col-md-3 card mb-2 pt-3 mt-5 ml-2 " style="width: 25rem; display: block; margin: auto;">
+            <img src="~/Upload/@urun.Image" class="card-img-top" alt="..." style="width: 200px; height: 200px; display: block; margin: auto;">
+            <div class="card-body">
+
+                <a href="/Home/Details/@urun.Id" style="text-decoration: none; color: #696969;font-size:15px; "><p>@urun.Name</p></a>
+
+                <h5 class="mx-5 " style="color: #00a000 ">
+
+                    @urun.Price
+                    <i class="fas fa-lira-sign" style="font-size: 15px; color:black;"></i>
+                </h5>
+
+                <a href="/Home/Details/@urun.Id" class="btn btn-outline-warning px-2 mx-4">
+
+                    <h6 style="color:black;"> Sepete Ekle</h6>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+
+                }
+
+            
+        </div>
+    </div>

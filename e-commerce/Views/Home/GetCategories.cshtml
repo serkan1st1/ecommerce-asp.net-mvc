@@ -1,0 +1,30 @@
+﻿@model IEnumerable< e_commerce.Entity.Category>
+
+<h3 class="px-4">FİLTRE</h3>
+<ul class="list-group" style="color:black;">
+    <li class="list-group-item mt-4">
+        <i class="fas fa-align-left" style="color: #ff7b00; "></i>
+
+        <a href="/Home/List" style="text-decoration: none; color: #ff7b00">
+
+            Tüm Kategori
+        </a>
+
+    </li>
+        @foreach (var item in Model)
+        {
+
+<li class="list-group-item ">
+    <i class="fas fa-align-left" style="color: white; "></i>
+
+    <a href="/Home/List/@item.Id" style="text-decoration: none; color: #ff7b00;">
+
+        @item.Name
+    </a>
+</li>
+
+    }
+
+    </ul>
+
+

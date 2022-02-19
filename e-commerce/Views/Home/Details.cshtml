@@ -1,0 +1,87 @@
+﻿@using e_commerce.Entity;
+
+@model Product
+
+@{
+    ViewBag.Title = "Details";
+}
+<div id="product-details" class="container pb-5" >
+    <div class="row ">
+        <div class="col-md-6 ">
+            <img src="~/Upload/@Model.Image" class="img-fluid rounded mt-4">
+        </div>
+        <div class="col-md-6">
+
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    @if (Model.IsApproved)
+                    {<button type="submit" class="badge btn-warning  " style="height: 20px; width: 47px; color: #363636; ">
+                            
+                                Stokta
+                           
+                        </button>}
+                    else
+                    {
+                        <button class="badge bg-danger  " style="height: 25px; width: 70px;  ">
+                            <p class="text-justify border-5">
+                                Tükendi
+                            </p>
+                        </button>
+                    }
+
+
+                    <span class="product-number">#236606</span>
+                </div>
+
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h1 style=" font-size: 25px; font-weight: 700;">@Model.Name</h1>
+                </div>
+            </div>
+
+
+            <div class="col-md-8 pt-4">
+                <h4 id="product-price">@Model.Price TL</h4>
+
+                <div class="col-md-8 pt-4">
+
+                    @using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                        @Html.HiddenFor(i => i.Id)
+                        <button type="submit" class="btn btn-warning" style="color: #363636; ">
+                            <i class="bi bi-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+
+                    }
+                </div>
+                </div>
+
+
+            </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="bd-example mt-3">
+                    <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                     
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="question-answer-tab" data-bs-toggle="tab" data-bs-target="#question-answer" type="button" role="tab" aria-controls="question-answer" aria-selected="true">Soru&Cevap</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade" id="product-description" role="tabpanel" aria-labelledby="product-description-tab">
+                            <p><strong>This is some placeholder content the Home tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                        </div>
+                        
+                        <div class="tab-pane fade active show" id="question-answer" role="tabpanel" aria-labelledby="question-answer-tab">
+                            <p><strong>@Model.Description </strong> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

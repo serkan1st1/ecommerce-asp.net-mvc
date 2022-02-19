@@ -1,0 +1,21 @@
+﻿@using e_commerce.Models
+@model e_commerce.Models.Cart
+
+<style>
+
+    #cart {
+        color:#daa520;
+    }
+</style>
+
+<ul class="navbar-nav  my-2 my-lg-0">
+    <li id="cart" class="nav-item">
+        <a class="nav-link" href="/Cart" style="color: white; ">
+            <i class="fa fa-shopping-cart fa-lg" aria-hidden="true" style="color:white;"></i>
+            
+            (@Model.CartLines.Count)
+        </a>
+        
+    </li>
+
+</ul>

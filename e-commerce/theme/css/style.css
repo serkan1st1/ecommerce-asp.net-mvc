@@ -1,0 +1,127 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+    padding: 60px 15px 0;
+  }
+
+  .yukseklik{
+
+    height: 400px;
+    width: 150px;
+  }
+#write-review{
+    margin-left: -50px;
+  }
+
+
+.card-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #484848;
+    line-height: 1.35em;
+    height: 34px;
+    
+    
+}
+
+.pro-price{
+    color:#414141;
+    font-weight:700;
+    font-size:15px;
+}
+.description {
+    font-size: 12px;
+    height:40px;
+    
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+footer a.text-light:hover {
+    color: #fed136 !important;
+    text-decoration: none;
+}
+
+footer .cizgi {
+    border-right: 1px solid #535e67;
+}
+
+@media (max-width: 992px) {
+    footer .cizgi {
+        border-right: none;
+    }
+}
+/* Not required for template or sticky footer method. */
+/* Not required for template or sticky footer method. */
+/* Not required for template or sticky footer method. */
+
+.kutu {
+    height: 7px;
+
+    background: #FFA500;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sidenav {
+    height: 100%;
+    width: 0; /*Geniþliði javascriptle deðiþtir*/
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .4);
+    overflow-x: hidden; /*Yatay kaydýrmayý devre dýþý býrak */
+    transition: 0.5s; /* Sidenav'da kaymaya 0,5 saniye geçiþ efekti */
+    padding-top: 200px; /*Ýçeriði üstten 60 piksel yerleþtirin */
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color:#000000;
+        display: block;
+        transition: 0.3s;
+    }
+        /*Menüler üzerine gelince  renklerini deðiþtirin */
+
+        .sidenav a:hover {
+            color:orange;
+        }
+    /*Kapat düðmesini konumlandýrýn ve stillendirin (sað üst köþe) */
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 50px;
+        margin-left: 50px;
+    }
+/* Yüksekliðin 450 pikselden az olduðu daha küçük ekranlarda, 
+sidenav stilini deðiþtirin 
+(daha az dolgu ve daha küçük bir yazý tipi boyutu) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+
+

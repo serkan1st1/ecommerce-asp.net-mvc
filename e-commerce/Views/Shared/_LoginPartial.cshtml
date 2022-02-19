@@ -1,0 +1,26 @@
+﻿<div class="btn-group">
+
+    @if (Request.IsAuthenticated)
+    {//UserName and Logout
+    <div>
+        
+        <a class="badge " href="/Account"><h5 style="color:white">@User.Identity.Name</h5></a>
+        <a href="Account/Logout" class="btn btn-danger mx-2">
+            <h5>Çıkış <i class="fas fa-sign-out-alt"></i></h5> 
+        </a>
+    </div>
+    }
+    else
+    {
+        //Login and register
+
+        <a  href="/Account/Login" class="btn">
+            <i class="fas fa-user fa-lg" style="color:white; "></i>
+        </a>
+
+       
+    }
+</div>
+
+
+
